@@ -1,0 +1,39 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "bootstrap-modal.css"; 
+@import "../select2.css";
+.control-label{ @apply block text-sm font-semibold text-gray-700 sm:mt-px sm:pt-2 mb-1; }
+.control-label.required{ position: relative; }
+.control-label.required::before {content: "*";color: red;position: absolute;top: 5px;left: -6px;font-size: 12px;}
+.form-control{@apply transition duration-300 ease-in-out rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;}
+.form-checkbox{@apply transition duration-150 ease-in-out focus:ring-indigo-500 h-5 w-5 text-indigo-600 border-gray-300 rounded focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50;}
+.form-radio{@apply transition duration-150 ease-in-out focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 h-4 w-4 text-indigo-600 border-gray-300;}
+.has-error .form-control{ @apply border-red-500; }
+.help-block{ @apply text-sm text-red-600; }
+.btn-primary{ @apply transition duration-500 ease-in-out cursor-pointer bg-gray-800 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300; }
+.btn-danger{ @apply transition duration-500 ease-in-out w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:border-red-900 focus:ring focus:ring-red-300 sm:ml-3 sm:w-auto sm:text-sm;}
+.btn-light{ @apply transition duration-500 ease-in-out w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 sm:mt-0 sm:w-auto sm:text-sm;}
+/* Table List Style */
+.list-table table{@apply min-w-full divide-y divide-gray-200;}
+.list-table table thead tr th{@apply px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider;}
+.list-table table tbody{@apply bg-white divide-y divide-gray-200;}
+.list-table table tbody tr{@apply hover:bg-gray-100;}
+.list-table table tbody tr td{@apply px-4 py-3 whitespace-nowrap text-sm text-gray-700;} 
+.list-table table thead tr th.th-col-action, .list-table table tbody tr td.col-action{ @apply text-right flex justify-end;}
+/* Switch Checkbox */
+.switch_checkbox .switch{position:relative;display:inline-block;width:60px;height:34px}
+.switch_checkbox .switch input{opacity:0;width:0;height:0}
+.switch_checkbox .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#727272;-webkit-transition:.4s;transition:.4s}
+.switch_checkbox .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:#fff;-webkit-transition:.4s;transition:.4s}
+.switch_checkbox input:checked+.slider{background-color:#007bff}
+.switch_checkbox input:focus+.slider{box-shadow:0 0 1px #007bff}
+.switch_checkbox input:checked+.slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px)}
+.switch_checkbox .slider.round{border-radius:34px}
+.switch_checkbox .slider.round:before{border-radius:50%}
+.admin_logo img{ height: 50px; } 
+.select2-container .select2-selection--multiple{ min-height: 42px; }
+.select2-container--default.select2-container--focus .select2-selection--multiple { border: solid #d0d0d0 1px;}
+.link{@apply text-blue-500 hover:underline;}
+table {color: #303030;}
+table tbody th {color: #676056;}
