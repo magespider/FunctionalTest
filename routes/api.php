@@ -18,8 +18,12 @@ use App\Http\Controllers\API\CardsController;
 /* Column APIs */  
 Route::resource('columns', ColumnsController::class)->only(['index', 'store', 'update', 'destroy']);
 
+Route::post('card-orderchange/{column_id}',[ColumnsController::class,'cardOrderChange']);
+
 /* Card APIs */  
 Route::resource('cards', CardsController::class)->only(['index', 'store', 'update', 'destroy']);
+
+Route::post('cards/{card_id}/column/{column_id}',[CardsController::class,'columnUpdate']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

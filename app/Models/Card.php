@@ -18,10 +18,10 @@ class Card extends Model implements Sortable
     protected $table = 'cards';
 
     /**
-    * The database primary key value.
-    *
-    * @var string
-    */
+     * The database primary key value.
+     *
+     * @var string
+     */
     protected $primaryKey = 'id';
 
     /**
@@ -36,9 +36,7 @@ class Card extends Model implements Sortable
      *
      * @var array
      */
-    protected $hidden = [
-        'position',
-        'column_id',
+    protected $hidden = [ 
         'updated_at',
     ];
 
@@ -66,4 +64,11 @@ class Card extends Model implements Sortable
         'order_column_name' => 'position',
         'sort_when_creating' => true,
     ];
+
+    // MyModel.php
+
+    public function buildSortQuery()
+    {
+        return static::query()->where('column_id', $this->column_id);
+    }
 }

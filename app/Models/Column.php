@@ -36,8 +36,7 @@ class Column extends Model implements Sortable
      *
      * @var array
      */
-    protected $hidden = [
-        'position',
+    protected $hidden = [ 
         'updated_at',
     ];
 
@@ -55,7 +54,7 @@ class Column extends Model implements Sortable
      */
     public function cards()
     {
-        return $this->hasMany(Card::class);
+        return $this->hasMany(Card::class)->orderBy('position','ASC');
     }
 
     /* 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Column;
+use App\Models\Card;
 use Illuminate\Http\Request;
 
 class ColumnsController extends Controller
@@ -36,17 +37,26 @@ class ColumnsController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Store a newly created resource in storage.
      *
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function cardOrderChange(Request $request, $id)
     {
         $column = Column::findOrFail($id);
 
-        return $column;
+        if(!empty($request->cards)){
+            $i = 1;
+            foreach($request->cards as $cartId){
+                Card::where('id', $cartId)->update(['position' => $i]);
+                $i++;
+            }
+        }
+        $column = Column::create($request->all());
+
+        return response()->json([], 201);
     }
 
     /**
