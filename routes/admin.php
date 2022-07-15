@@ -26,5 +26,11 @@ Route::group([
     /* Settings Modules */ 
     Route::resource('settings', SettingsController::class)->except('show'); 
     Route::post('tinymce/upload', [TinymceController::class, 'store'])->name('tinymce.upload');
+
+    /* Column Module */  
+    Route::resource('columns', ColumnsController::class)->except('show'); 
+
+    /* Card Module */ 
+    Route::resource('cards', CardsController::class)->except('show');  
 });      
 require __DIR__.'/auth-admin.php';

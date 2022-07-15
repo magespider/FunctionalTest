@@ -1,0 +1,10 @@
+<div class="space-y-8">
+    <div>
+        <div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5"> 
+            %%formFieldsHtml%%
+        </div>    
+    </div> 
+</div>
+<div class="py-5 flex justify-end">
+    {!! Form::submit($formMode === 'edit' ? __('admin.update') : __('admin.create'), ['class' => 'btn btn-primary']) !!}
+</div>

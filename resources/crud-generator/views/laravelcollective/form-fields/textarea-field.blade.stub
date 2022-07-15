@@ -1,0 +1,1 @@
+{!! Form::textarea('%%itemName%%', null, ('%%required%%' == 'required') ? ['class' => 'form-control w-full', 'required' => 'required'] : ['class' => 'form-control w-full']) !!}

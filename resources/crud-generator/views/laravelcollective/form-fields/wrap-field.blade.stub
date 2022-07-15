@@ -1,0 +1,7 @@
+<x-admin.wrap-field-row> 
+    <x-slot name="label"> 
+            {!! Form::label('%1$s', %2$s, ['class' => 'control-label required sm:mt-px']) !!}
+    </x-slot>
+    %3$s
+    {!! $errors->first('%1$s', '<p class="help-block">:message</p>') !!}
+</x-admin.wrap-field-row>

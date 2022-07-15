@@ -19,7 +19,7 @@
 .list-table table thead tr th{@apply px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider;}
 .list-table table tbody{@apply bg-white divide-y divide-gray-200;}
 .list-table table tbody tr{@apply hover:bg-gray-100;}
-.list-table table tbody tr td{@apply px-4 py-3 whitespace-nowrap text-sm text-gray-700;} 
+.list-table table tbody tr td{@apply px-4 py-3 text-sm text-gray-700;} 
 .list-table table thead tr th.th-col-action, .list-table table tbody tr td.col-action{ @apply text-right flex justify-end;}
 /* Switch Checkbox */
 .switch_checkbox .switch{position:relative;display:inline-block;width:60px;height:34px}

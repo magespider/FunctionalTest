@@ -1,0 +1,5 @@
+<x-admin.wrap-field col="1">
+    {!! Form::label('%1$s', %2$s, ['class' => 'control-label required']) !!}
+    %3$s
+    {!! $errors->first('%1$s', '<p class="help-block">:message</p>') !!}
+</x-admin.wrap-field>
